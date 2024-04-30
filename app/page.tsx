@@ -1,8 +1,6 @@
 import AccountSummary from "@/components/AccountSummary";
-import ConnectButton from "@/components/ConnectButton";
-import MainProvider from "@/components/MainProvider";
+import MainProvider from "@/providers/MainProvider";
 import NavBar from "@/components/NavBar";
-import Image from "next/image";
 
 export default function Home() {
   return (

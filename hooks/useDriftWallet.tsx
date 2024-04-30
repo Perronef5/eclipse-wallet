@@ -9,7 +9,12 @@ import {
 } from "react";
 import { SnapWalletAdapter } from "@drift-labs/snap-wallet-adapter";
 import { AnchorProvider, Wallet } from "@coral-xyz/anchor";
-import { Connection, Transaction, VersionedTransaction } from "@solana/web3.js";
+import {
+  Connection,
+  Transaction,
+  VersionedTransaction,
+  clusterApiUrl,
+} from "@solana/web3.js";
 import { useAsync } from "react-async-hook";
 import {
   AccountLayout,
@@ -104,7 +109,7 @@ const useDriftWalletHook = (): DriftWallet => {
     } as Wallet;
 
     const connection = new Connection(
-      "https://rpc-devnet.helius.xyz?api-key=6acaedc2-d08d-4239-81a9-43017204fb45"
+      process.env.NEXT_PUBLIC_SOLANA_RPC || clusterApiUrl("devnet")
     );
 
     const anchorProvider = new AnchorProvider(connection, anchorWallet, {
