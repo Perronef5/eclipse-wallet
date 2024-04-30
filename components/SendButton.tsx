@@ -140,7 +140,7 @@ const SendButton = () => {
           </button>
           <button
             onClick={handleSend}
-            className="btn btn-active btn-secondary"
+            className="btn btn btn-secondary"
             disabled={modalState === ModalState.SENDING}
           >
             {modalState === ModalState.SENDING ? (
@@ -159,10 +159,7 @@ const SendButton = () => {
 
   return (
     <>
-      <button
-        onClick={openModal}
-        className="btn btn-active btn-secondary min-w-28"
-      >
+      <button onClick={openModal} className="btn btn-secondary min-w-28">
         Send
       </button>
 

@@ -32,10 +32,7 @@ const RecieveButton = () => {
 
   return (
     <>
-      <button
-        onClick={openModal}
-        className="btn btn-active btn-secondary min-w-28"
-      >
+      <button onClick={openModal} className="btn btn-secondary min-w-28">
         Recieive
       </button>
 

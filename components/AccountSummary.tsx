@@ -9,6 +9,7 @@ import SendButton from "./SendButton";
 import RecieveButton from "./RecieiveButton";
 import { useTokenPrices } from "@/hooks/useTokenPrices";
 import TokenListItem from "./TokenListItem";
+import AirdropButton from "./AirdropButton";
 
 const AccountSummary = () => {
   const { anchorProvider, tokenAccounts } = useDriftWallet();
@@ -40,6 +41,7 @@ const AccountSummary = () => {
       <h2 className="text-white text-5xl text-center mt-8">{balanceInUSD}</h2>
       <div className="flex gap-2 justify-center">
         <SendButton />
+        <AirdropButton />
         <RecieveButton />
       </div>
 
