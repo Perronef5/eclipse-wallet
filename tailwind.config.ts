@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["ABC Monument Grotesk", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +18,25 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        eclipse: {
+          primary: "#ff4301",
+          secondary: "#c4ffc3",
+          accent: "#ffb036",
+          neutral: "#000",
+          "neutral-content": "#fff",
+          "base-100": "#ffffff",
+          info: "#0000ff",
+          success: "#c4ffc3",
+          warning: "#e9ff53",
+          error: "#e03a00",
+          "primary-content": "#fff",
+        },
+      },
+    ],
+  },
 };
 export default config;
